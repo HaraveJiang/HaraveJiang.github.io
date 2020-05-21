@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HaraveJ的小书屋</title>
+  <meta name="Author" content="HaraveJ的小书屋">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="website-bg am-clip-circle">
+    <div class="website-bg-img"></div>
+    <div class="website-bg-shade"></div>
+  </div>
+  <div class="center-layout am-clip-circle">
+    <div class="center-layout-body">
+
+      <div class="info-box animated fadeInUp">
+        <div class="info-centent">
+          <div class="info-header">
+            <div class="user-avatar avator-wrap am-clip-circle" id="avator-box" style="animation-delay: 1s"></div>
+            <!-- <img id="avator" src="" class="info-logo"> -->
+          </div>
+          <h1 class="info-title animated am-fade-down">HaraveJ</h1>
+          <p class="text-center am-fade-down" style="animation-delay: 1.2s">Java、Python、PHP、Vue.js、Golang</p>
+          <nav class="navbar">
+            <ul class="navbar-item am-fade-up" style="animation-delay: 1.4s">
+              <li class="nav-item am-fade-up" style="animation-delay: 1.6s"><a href="#">首页</a></li>
+              <li class="nav-item am-fade-up" style="animation-delay: 1.8s"><a href="#">作品</a></li>
+              <li class="nav-item am-fade-up" style="animation-delay: 2s"><a href="#">简历</a></li>
+              <li class="nav-item am-fade-up" style="animation-delay: 2.2s"><a href="#">关于</a></li>
+            </ul>
+          </nav>
+          <div class="text-center" style="margin-top: 30px"> <a href="#" target="_blank">
+              <button class="m-button m-button-large m-button-info m-button-rounded am-fade-left"
+                style="animation-delay: 2.3s"><i class="fa fa-github"></i>&nbsp;Github</button>
+            </a>&nbsp; <a href="#">
+              <button
+                class="m-button m-button-large m-button-success m-button-type-plain m-button-rounded am-fade-right"
+                style="animation-delay: 2.3s"><i class="fa fa-code"></i>&nbsp;My blog</button>
+            </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    window.addEventListener('load', function () {
+
+      var avatorBox = document.getElementById('avator-box')
+
+      var avatorUrl = 'images/avator.jpg'
+
+      var img = new Image()
+
+      img.className = 'avatar-img am-clip-circle'
+
+      img.onload = function () {
+
+        // console.log(arguments)
+
+        avatorBox.appendChild(img)
+
+      }
+
+      img.src = avatorUrl
+
+    })
+
+  </script>
+  <script src="js/snow.js"></script>
+  <script>
+
+    setTimeout(function () {
+
+      var snow = new SnowEffect({})
+
+
+
+      snow.start()
+
+      window.addEventListener('resize', snow.start.bind(snow), false)
+
+    }, 1500)
+
+  </script>
+</body>
+
+</html>
